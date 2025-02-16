@@ -6,26 +6,40 @@
     <title>Personal Bio Page</title>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
-        
+        /* General Styles */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #ffffff;
+            background-color: #f4f4f4;
             text-align: center;
+            color: #333;
         }
 
-        
+        /* Header Section */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px 50px;
+            background: #fff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
 
         .logo {
             font-size: 24px;
             font-weight: bold;
+            position: relative;
+        }
+
+        .logo::after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #ff9800;
+            margin: 5px auto 0;
         }
 
         nav ul {
@@ -44,16 +58,60 @@
             text-decoration: none;
             color: black;
             font-weight: bold;
+            position: relative;
+            transition: color 0.3s, transform 0.3s;
         }
 
-        
+        nav ul li a:hover {
+            color: #ff9800;
+            transform: scale(1.1);
+        }
+
+        nav ul li a:focus {
+            outline: none;
+            border-bottom: 2px solid #ff9800;
+        }
+
+        nav ul li a:visited {
+            color: gray;
+        }
+
+        nav ul li a::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #ff9800;
+            transition: width 0.3s;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        /* Main Section */
         .bio-container {
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: left;
-            padding: 50px;
+            padding: 80px;
             gap: 50px;
+            position: relative;
+        }
+
+        /* Background pseudo-element */
+        .bio-container::before {
+            content: "";
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 200px;
+            height: 200px;
+            background: #ff9800;
+            border-radius: 50%;
+            z-index: -1;
+            opacity: 0.2;
         }
 
         .profile-pic img {
@@ -61,17 +119,36 @@
             height: 250px;
             border-radius: 50%;
             object-fit: cover;
+            border: 5px solid #ff9800;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .profile-pic img:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
         }
 
         .bio h2 {
             margin: 0;
             font-size: 24px;
+            color: #ff9800;
         }
 
         .bio h1 {
             margin: 10px 0;
-            font-size: 32px;
+            font-size: 36px;
             font-weight: bold;
+            position: relative;
+        }
+
+        .bio h1::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #ff9800;
+            margin: 10px 0;
         }
 
         .bio h3 {
@@ -80,16 +157,35 @@
             margin-bottom: 10px;
         }
 
-        
+        /* Biography Section */
         .bio p {
             font-size: 16px;
             line-height: 1.5;
             max-width: 500px;
             color: #333;
             margin-bottom: 20px;
+            position: relative;
         }
 
-        
+        .bio p::before {
+            content: "❝";
+            font-size: 30px;
+            color: #ff9800;
+            position: absolute;
+            left: -25px;
+            top: -10px;
+        }
+
+        .bio p::after {
+            content: "❞";
+            font-size: 30px;
+            color: #ff9800;
+            position: absolute;
+            right: -25px;
+            bottom: -10px;
+        }
+
+        /* Buttons */
         .buttons {
             display: flex;
             gap: 15px;
@@ -101,10 +197,18 @@
             border: none;
             cursor: pointer;
             border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.2s;
         }
 
         .cv-btn {
             background-color: #ddd;
+        }
+
+        .cv-btn:hover {
+            background-color: #ff9800;
+            color: white;
+            transform: scale(1.05);
         }
 
         .contact-btn {
@@ -112,7 +216,12 @@
             color: white;
         }
 
-        
+        .contact-btn:hover {
+            background-color: #ff9800;
+            transform: scale(1.05);
+        }
+
+        /* Social Media */
         .social-icons {
             margin-top: 20px;
         }
@@ -122,6 +231,12 @@
             color: black;
             font-size: 24px;
             margin: 0 10px;
+            transition: color 0.3s, transform 0.2s;
+        }
+
+        .social-icons a:hover {
+            color: #ff9800;
+            transform: scale(1.2);
         }
     </style>
 </head>
@@ -143,11 +258,11 @@
     
     <section class="bio-container">
         <div class="profile-pic">
-            <img src="Screenshot 2025-02-16 140034.png" alt="Profile Picture">
+            <img src="profile.jpg" alt="Profile Picture">
         </div>
         <div class="bio">
             <h2>Hello, I'm</h2>
-            <h1>Cyomugisha Ishimwe Collin</h1>
+            <h1>Cyomugisha Ishimwe Collin </h1>
             <h3>FullStack Developer</h3>
             
             
