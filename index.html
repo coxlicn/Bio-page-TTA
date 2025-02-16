@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Bio Page</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        
+        .bio-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+            padding: 50px;
+            gap: 50px;
+        }
+
+        .profile-pic img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .bio h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .bio h1 {
+            margin: 10px 0;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .bio h3 {
+            font-size: 20px;
+            color: gray;
+            margin-bottom: 10px;
+        }
+
+        
+        .bio p {
+            font-size: 16px;
+            line-height: 1.5;
+            max-width: 500px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        
+        .buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .cv-btn, .contact-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .cv-btn {
+            background-color: #ddd;
+        }
+
+        .contact-btn {
+            background-color: black;
+            color: white;
+        }
+
+        
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            color: black;
+            font-size: 24px;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <header>
+        <h1 class="logo">Cyomugisha</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <section class="bio-container">
+        <div class="profile-pic">
+            <img src="Screenshot 2025-02-16 140034.png" alt="Profile Picture">
+        </div>
+        <div class="bio">
+            <h2>Hello, I'm</h2>
+            <h1>Cyomugisha Ishimwe Collin</h1>
+            <h3>FullStack Developer</h3>
+            
+            
+            <p>
+                Passionate about technology and coding, I specialize in full-stack development, crafting responsive and user-friendly applications.
+                I enjoy problem-solving, learning new programming languages, and collaborating on innovative projects. In my free time, I love reading tech blogs and exploring AI advancements.
+            </p>
+
+            <div class="buttons">
+                <button class="cv-btn">Download CV</button>
+                <button class="contact-btn">Contact Info</button>
+            </div>
+            
+            
+            <div class="social-icons">
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
